@@ -18,16 +18,16 @@
                         <div class="card-body pt-0">
                             <div class="align-items-center py-5 d-flex justify-content-between flex-wrap w-100">
                                 <div class="d-flex gap-3 flex-wrap py-5 w-100">
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label">Mã định danh</label>
 
                                         <input type="text" class="form-control form-control-sm">
                                     </div>
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label">Tên định danh/ tên viết tắt</label>
                                         <input type="text" class="form-control form-control-sm">
                                     </div>
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label">Vùng miền</label>
 
                                         <select id="warehourse-report" class="form-select form-select-sm"
@@ -35,7 +35,7 @@
                                             <option value='all'>Tất cả</option>
                                         </select>
                                     </div>
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label">Loại hình hoạt động</label>
 
                                         <select id="warehourse-report" class="form-select form-select-sm"
@@ -43,7 +43,7 @@
                                             <option value='all'>Tất cả</option>
                                         </select>
                                     </div>
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label">Trạng thái hoạt động</label>
 
                                         <select id="warehourse-report" class="form-select form-select-sm"
@@ -51,25 +51,25 @@
                                             <option value='all'>Tất cả</option>
                                         </select>
                                     </div>
-                                    <!-- <div class="flex-row-fluid">
+                                    <!-- <div class="flex-row">
                                         <label for="" class="form-label">Từ ngày</label>
                                         <input class="form-control datepicker" placeholder="Chọn ngày"/>
                                     </div>
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label for="" class="form-label">Đến ngày</label>
                                         <input class="form-control datepicker" placeholder="Chọn ngày"/>
                                     </div> -->
-                                    <div class="flex-row-fluid">
+                                    <div class="flex-row">
                                         <label class="form-label"></label>
                                         <a class="btn btn-sm btn-primary form-control mt-2">Tìm
                                             kiếm</a>
                                     </div>
                                 </div>
                                 <div class="w-100 d-flex justify-content-end gap-3">
-                                    <btn class="btn btn-primary btn-export btn-sm" data-bs-toggle="modal"
+                                    <btn class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#create"><i style="font-size: 16px;" class="bi bi-plus"></i>
                                         Thêm mới</btn>
-                                    <btn class="btn btn-success btn-export btn-sm"><i style="font-size: 16px;"
+                                    <btn class="btn btn-success btn-sm"><i style="font-size: 16px;"
                                             class="bi bi-download"></i> Tải danh sách</btn>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                                         <div role="button"
                                                             class="d-flex flex-column h-100 align-items-center">
                                                             <img style="width: 20px; height: 20px;"
-                                                                src="https://files.axshare.com/gsc/OSN4J5/2b/e4/01/2be40146c2e6445187547d3dd7a9be6a/images/danh_s_ch_ph_ng_giao_d_ch__t__ch_c_t_n_d_ng/u121.svg?pageId=08de88d4-c611-4c30-934a-67c9eee4a154"
+                                                                src="assets/images/inactive.svg"
                                                                 alt="" srcset="">
                                                             <p class="text-success m-0">Inactive</p>
                                                         </div>
@@ -121,7 +121,7 @@
                                                             data-bs-target="#update"
                                                             class="d-flex flex-column h-100 align-items-center">
                                                             <img style="width: 20px; height: 20px;"
-                                                                src="https://files.axshare.com/gsc/OSN4J5/2b/e4/01/2be40146c2e6445187547d3dd7a9be6a/images/danh_s_ch_ph_ng_giao_d_ch__t__ch_c_t_n_d_ng/u122.svg?pageId=08de88d4-c611-4c30-934a-67c9eee4a154"
+                                                                src="assets/images/update.svg"
                                                                 alt="" srcset="">
                                                             <p class="text-warning m-0">Sửa</p>
                                                         </div>
@@ -129,7 +129,7 @@
                                                         <div role="button" data-bs-toggle="modal" data-bs-target="#delete"
                                                             class="d-flex flex-column h-100 align-items-center">
                                                             <img style="width: 20px; height: 20px;"
-                                                                src="https://files.axshare.com/gsc/OSN4J5/2b/e4/01/2be40146c2e6445187547d3dd7a9be6a/images/danh_s_ch_ph_ng_giao_d_ch__t__ch_c_t_n_d_ng/u123.svg?pageId=08de88d4-c611-4c30-934a-67c9eee4a154"
+                                                                src="assets/images/delete.svg"
                                                                 alt="" srcset="">
                                                             <p class="text-danger m-0">Xóa</p>
                                                         </div>
@@ -535,12 +535,4 @@
 
 
 
-
-    <script>
-        Array.from(document.querySelectorAll('.datepicker')).forEach((e) => {
-            e.flatpickr({
-                dateFormat: "d-m-Y",
-            });
-        });
-    </script>
 </body>

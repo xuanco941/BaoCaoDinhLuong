@@ -4,7 +4,7 @@
             <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
-                        NHẬP HÀNG TRẢ LẠI
+                        Quản lý tập dữ liệu
                     </h1>
                 </div>
             </div>
@@ -12,114 +12,245 @@
 
         <div id="kt_app_content_container" class="app-container container-xxl">
             <div id="kt_ecommerce_add_product_form"
-                class="form d-flex flex-column fv-plugins-bootstrap5 fv-plugins-framework"
-                data-kt-redirect="../../demo1/dist/apps/ecommerce/catalog/products.html">
-                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                class="form d-flex flex-column fv-plugins-bootstrap5 fv-plugins-framework">
+                <div class="d-flex flex-column">
+                    <div class="card card-flush">
+                        <div class="card-body pt-0">
+                            <div class="align-items-center py-5 d-flex justify-content-between flex-wrap w-100">
+                                <div class="d-flex gap-3 flex-wrap py-5 w-100">
 
-                    <div class="d-flex flex-column gap-7 gap-lg-10">
-                        <div class="card card-flush">
-                            <div class="card-body pt-0">
-                                <div class="card-header align-items-center py-5 d-flex justify-content-between flex-wrap"
-                                    style="width: 100%;">
-                                    <div class="d-flex gap-5 flex-wrap py-5">
-                                        <div class="flex-row-fluid">
-                                            <label for="" class="form-label">Từ ngày</label>
-                                            <input class="form-control" placeholder="Chọn ngày"
-                                                id="kt_datepicker_1_return_sample" />
-                                            <script>
-                                                $("#kt_datepicker_1_return_sample").flatpickr();
-                                            </script>
+                                    <div class="flex-row">
+                                        <label for="" class="form-label">Ngày cập nhật</label>
+                                        <input class="form-control form-control-sm datepicker"
+                                            placeholder="23/8/2023" />
+                                    </div>
+                                    <div class="flex-row">
+                                        <label class="form-label">Tên file</label>
+
+                                        <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                    </div>
+                                    <div class="flex-row">
+                                        <label class="form-label"></label>
+                                        <a class="btn btn-sm btn-primary form-control form-control-sm mt-2">Tìm
+                                            kiếm</a>
+                                    </div>
+                                </div>
+                                <div class="w-100 d-flex justify-content-end gap-3">
+                                    <btn data-bs-toggle="modal" data-bs-target="#download" class="btn btn-success btn-sm"><i style="font-size: 16px;"
+                                            class="bi bi-download"></i> Tải danh sách</btn>
+                                    <btn class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete">
+                                        <i style="font-size: 16px;" class="bi bi-trash"></i>
+                                        Xóa dữ liệu
+                                    </btn>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active fs-3" id="dinh-luong" data-bs-toggle="tab"
+                                        data-bs-target="#dinh-luong-pane" type="button" role="tab"
+                                        aria-controls="dinh-luong-pane" aria-selected="true">Định lượng</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fs-3" id="dinh-tinh" data-bs-toggle="tab"
+                                        data-bs-target="#dinh-tinh-pane" type="button" role="tab"
+                                        aria-controls="dinh-tinh-pane" aria-selected="false">Định tính</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="dinh-luong-pane" role="tabpanel"
+                                    aria-labelledby="dinh-luong" tabindex="0">
+                                    <div class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                        <div class="table-responsive">
+                                            <table class="text-center table align-middle table-bordered fs-6 gy-5">
+                                                <thead>
+                                                    <tr class="align-middle text-gray-600 fw-bold fs-6 gs-0">
+                                                        <th>STT</th>
+                                                        <th>Tên File</th>
+                                                        <th>Loại báo cáo</th>
+                                                        <th>Dung lượng</th>
+                                                        <th>Ngày cập nhật</th>
+                                                        <th>Trạng thái sử dụng</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody class="fw-semibold text-gray-800">
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>Đang sử dụng</td>
+                                                        <td>
+                                                            <div class="d-flex justify-content-around">
+                                                                <div role="button"
+                                                                    class="d-flex flex-column h-100 align-items-center">
+                                                                    <img style="width: 20px; height: 20px;"
+                                                                        src="assets/images/inactive.svg" alt=""
+                                                                        srcset="">
+                                                                    <p class="text-success m-0">Inactive</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        <div class="flex-row-fluid">
-                                            <label for="" class="form-label">Đến ngày</label>
-                                            <input class="form-control" placeholder="Chọn ngày"
-                                                id="kt_datepicker_2_return_sample" />
-                                            <script>
-                                                $("#kt_datepicker_2_return_sample").flatpickr();
-                                            </script>
-                                        </div>
-                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
-                                            <label class="form-label">Nguồn</label>
-
-                                            <select id="warehourse-report_return_sample" class="form-select"
-                                                aria-label="Default select example">
-                                                <option value='all'>Tất cả cửa hàng</option>
-                                            </select>
-                                        </div>
-                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
-                                            <label class="form-label">Số hóa đơn</label>
-
-                                            <input type="text" class="form-control" id="keywordReport_return_sample">
-                                        </div>
-
-
-                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
-                                            <div class="flex-row-fluid">
-                                                <label class="form-label"></label>
-                                                <a href="#"
-                                                    class="btn btn-primary mt-2 form-control btn-search-report_return_sample">Tìm
-                                                    kiếm</a>
+                                        <div class="row mt-5">
+                                            <div
+                                                class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <div class="dataTables_length" id="kt_ecommerce_sales_table_length">
+                                                    <label><select name="kt_ecommerce_sales_table_length"
+                                                            aria-controls="kt_ecommerce_sales_table"
+                                                            class="form-select form-select-sm form-select-solid">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select></label>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="kt_ecommerce_sales_table_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled"
+                                                            id="kt_ecommerce_sales_table_previous">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="0" tabindex="0" class="page-link"><i
+                                                                    class="previous"></i></a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="5" tabindex="0" class="page-link">5</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item next"
+                                                            id="kt_ecommerce_sales_table_next">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="6" tabindex="0" class="page-link"><i
+                                                                    class="next"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <label class="form-label"></label>
-                                        <div>
-                                            <btn class="btn btn-success btn-export-return-sample"><i style="font-size: 20px;"
-                                                    class="bi bi-file-earmark-spreadsheet"></i>
-                                                Xuất file Excel</btn>
+                                </div>
+                                <div class="tab-pane fade" id="dinh-tinh-pane" role="tabpanel"
+                                    aria-labelledby="dinh-tinh" tabindex="0">
+                                    <div class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                        <div class="table-responsive">
+                                            <table class="text-center table align-middle table-bordered fs-6 gy-5">
+                                                <thead>
+                                                    <tr class="align-middle text-gray-600 fw-bold fs-6 gs-0">
+                                                        <th>STT</th>
+                                                        <th>Tên File</th>
+                                                        <th>Loại báo cáo</th>
+                                                        <th>Dung lượng</th>
+                                                        <th>Ngày cập nhật</th>
+                                                        <th>Trạng thái sử dụng</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody class="fw-semibold text-gray-800">
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>Đang sử dụng</td>
+                                                        <td>
+                                                            <div class="d-flex justify-content-around">
+                                                                <div role="button"
+                                                                    class="d-flex flex-column h-100 align-items-center">
+                                                                    <img style="width: 20px; height: 20px;"
+                                                                        src="assets/images/inactive.svg" alt=""
+                                                                        srcset="">
+                                                                    <p class="text-success m-0">Inactive</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div
+                                                class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <div class="dataTables_length" id="kt_ecommerce_sales_table_length">
+                                                    <label><select name="kt_ecommerce_sales_table_length"
+                                                            aria-controls="kt_ecommerce_sales_table"
+                                                            class="form-select form-select-sm form-select-solid">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select></label>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                <div class="dataTables_paginate paging_simple_numbers"
+                                                    id="kt_ecommerce_sales_table_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled"
+                                                            id="kt_ecommerce_sales_table_previous">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="0" tabindex="0" class="page-link"><i
+                                                                    class="previous"></i></a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="5" tabindex="0" class="page-link">5</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item next"
+                                                            id="kt_ecommerce_sales_table_next">
+                                                            <a href="#" aria-controls="kt_ecommerce_sales_table"
+                                                                data-dt-idx="6" tabindex="0" class="page-link"><i
+                                                                    class="next"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div id="kt_report_return_sample_table_wrapper"
-                                    class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                    <div class="table-responsive">
-                                        <table class="table align-middle table-bordered fs-6 gy-5"
-                                            id="kt_invoice_request_list">
-                                            <thead>
-                                                <tr>
-                                                    <td colspan="20" class="text-center bg-info text-white py-2">THÔNG
-                                                        TIN CHUNG</td>
-                                                    <td colspan="6" class="text-center bg-primary text-white py-2">CHI
-                                                        TIẾT</td>
-                                                </tr>
-                                                <tr class="text-center text-gray-600 fw-bold fs-6 gs-0">
-                                                    <th class="min-w-100px">Ngày</th>
-                                                    <th class="min-w-70px">Chứng từ</th>
-                                                    <th class="min-w-70px">Mẫu HĐ</th>
-                                                    <th class="min-w-100px">Seri Hóa đơn</th>
-                                                    <th class="min-w-100px">Số Hóa đơn</th>
-                                                    <th class="min-w-100px">Ngày Hóa đơn</th>
-                                                    <th class="min-w-100px">% thuế VAT</th>
-                                                    <th class="min-w-100px">Diễn giải</th>
-                                                    <th class="min-w-100px">ĐVKH</th>
-                                                    <th class="min-w-100px">Mã ĐVKH</th>
-                                                    <th class="min-w-100px">Khách thuế</th>
-                                                    <th class="min-w-100px">Mã số thuế</th>
-                                                    <th class="min-w-100px">Phòng ban</th>
-                                                    <th class="min-w-100px">Mã phòng ban</th>
-                                                    <th class="min-w-100px">Kho</th>
-                                                    <th class="min-w-100px">Nợ</th>
-                                                    <th class="min-w-100px">Có</th>
-                                                    <th class="min-w-100px">Nhóm VAT</th>
-                                                    <th class="min-w-100px">Mã ĐVKH có</th>
-                                                    <th class="min-w-100px">ĐVKH có</th>
-                                                    <th class="min-w-100px">Mã Vlsphh</th>
-                                                    <th class="min-w-100px">Tên Visphh</th>
-                                                    <th class="min-w-100px">Số lượng</th>
-                                                    <th class="min-w-100px">Đơn giá</th>
-                                                    <th class="min-w-100px">VNĐ</th>
-                                                    <th class="min-w-100px">Thuế VAT</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody class="fw-semibold text-gray-800 text-center">
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -128,4 +259,108 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="download" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mw-500px">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <h2 class="text-center w-100 mb-0 mt-5"> Upload File</h2>
+
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <span class="svg-icon svg-icon-1">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                                    transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)"
+                                    fill="currentColor" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body py-lg-0 px-lg-8">
+                    <div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
+                        id="kt_modal_create_app_stepper">
+                        <div class="flex-row-fluid py-lg-5 px-lg-3">
+                            <form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
+                                <div class="card card-flush">
+                                    <div class="card-body pt-0 px-0">
+                                       
+                                        <div class="d-flex justify-content-around mt-10">
+                                            <button class="btn btn-sm btn-light me-5"
+                                                data-bs-dismiss="modal">Hủy</button>
+                                            <button type="submit" class="btn btn-primary btn-sm">
+                                                <span class="indicator-label">Đồng ý</span>
+                                                <span class="indicator-progress">Please wait...
+                                                    <span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mw-500px">
+            <div class="modal-content">
+                <div class="modal-header py-2">
+                    <h2 class="text-center w-100 mb-0 mt-5"> Xóa thông tin</h2>
+
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <span class="svg-icon svg-icon-1">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1"
+                                    transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)"
+                                    fill="currentColor" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body py-lg-0 px-lg-8">
+                    <div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid"
+                        id="kt_modal_create_app_stepper">
+                        <div class="flex-row-fluid py-lg-5 px-lg-3">
+                            <form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
+                                <div class="card card-flush">
+                                    <div class="card-body pt-0 px-0">
+                                        <p class="text-danger w-100 text-center fs-3">Bạn chắc chắn muốn xóa thông tin
+                                            này ?</p>
+                                        <div class="d-flex justify-content-around mt-10">
+                                            <button class="btn btn-sm btn-primary me-5"
+                                                data-bs-dismiss="modal">Hủy</button>
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <span class="indicator-label">Đồng ý</span>
+                                                <span class="indicator-progress">Please wait...
+                                                    <span
+                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        Array.from(document.querySelectorAll('.datepicker')).forEach((e) => {
+            e.flatpickr({
+                dateFormat: "d-m-Y",
+            });
+        });
+    </script>
+
 </body>

@@ -1,0 +1,131 @@
+<body>
+    <div id="kt_app_content" class="app-content flex-column-fluid py-lg-6">
+        <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+            <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+                <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">
+                        NHẬP HÀNG TRẢ LẠI
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="kt_app_content_container" class="app-container container-xxl">
+            <div id="kt_ecommerce_add_product_form"
+                class="form d-flex flex-column fv-plugins-bootstrap5 fv-plugins-framework"
+                data-kt-redirect="../../demo1/dist/apps/ecommerce/catalog/products.html">
+                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+
+                    <div class="d-flex flex-column gap-7 gap-lg-10">
+                        <div class="card card-flush">
+                            <div class="card-body pt-0">
+                                <div class="card-header align-items-center py-5 d-flex justify-content-between flex-wrap"
+                                    style="width: 100%;">
+                                    <div class="d-flex gap-5 flex-wrap py-5">
+                                        <div class="flex-row-fluid">
+                                            <label for="" class="form-label">Từ ngày</label>
+                                            <input class="form-control" placeholder="Chọn ngày"
+                                                id="kt_datepicker_1_return_sample" />
+                                            <script>
+                                                $("#kt_datepicker_1_return_sample").flatpickr();
+                                            </script>
+                                        </div>
+                                        <div class="flex-row-fluid">
+                                            <label for="" class="form-label">Đến ngày</label>
+                                            <input class="form-control" placeholder="Chọn ngày"
+                                                id="kt_datepicker_2_return_sample" />
+                                            <script>
+                                                $("#kt_datepicker_2_return_sample").flatpickr();
+                                            </script>
+                                        </div>
+                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
+                                            <label class="form-label">Nguồn</label>
+
+                                            <select id="warehourse-report_return_sample" class="form-select"
+                                                aria-label="Default select example">
+                                                <option value='all'>Tất cả cửa hàng</option>
+                                            </select>
+                                        </div>
+                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
+                                            <label class="form-label">Số hóa đơn</label>
+
+                                            <input type="text" class="form-control" id="keywordReport_return_sample">
+                                        </div>
+
+
+                                        <div class="fv-row flex-row-fluid fv-plugins-icon-container">
+                                            <div class="flex-row-fluid">
+                                                <label class="form-label"></label>
+                                                <a href="#"
+                                                    class="btn btn-primary mt-2 form-control btn-search-report_return_sample">Tìm
+                                                    kiếm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="form-label"></label>
+                                        <div>
+                                            <btn class="btn btn-success btn-export-return-sample"><i style="font-size: 20px;"
+                                                    class="bi bi-file-earmark-spreadsheet"></i>
+                                                Xuất file Excel</btn>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="kt_report_return_sample_table_wrapper"
+                                    class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-bordered fs-6 gy-5"
+                                            id="kt_invoice_request_list">
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="20" class="text-center bg-info text-white py-2">THÔNG
+                                                        TIN CHUNG</td>
+                                                    <td colspan="6" class="text-center bg-primary text-white py-2">CHI
+                                                        TIẾT</td>
+                                                </tr>
+                                                <tr class="text-center text-gray-600 fw-bold fs-6 gs-0">
+                                                    <th class="min-w-100px">Ngày</th>
+                                                    <th class="min-w-70px">Chứng từ</th>
+                                                    <th class="min-w-70px">Mẫu HĐ</th>
+                                                    <th class="min-w-100px">Seri Hóa đơn</th>
+                                                    <th class="min-w-100px">Số Hóa đơn</th>
+                                                    <th class="min-w-100px">Ngày Hóa đơn</th>
+                                                    <th class="min-w-100px">% thuế VAT</th>
+                                                    <th class="min-w-100px">Diễn giải</th>
+                                                    <th class="min-w-100px">ĐVKH</th>
+                                                    <th class="min-w-100px">Mã ĐVKH</th>
+                                                    <th class="min-w-100px">Khách thuế</th>
+                                                    <th class="min-w-100px">Mã số thuế</th>
+                                                    <th class="min-w-100px">Phòng ban</th>
+                                                    <th class="min-w-100px">Mã phòng ban</th>
+                                                    <th class="min-w-100px">Kho</th>
+                                                    <th class="min-w-100px">Nợ</th>
+                                                    <th class="min-w-100px">Có</th>
+                                                    <th class="min-w-100px">Nhóm VAT</th>
+                                                    <th class="min-w-100px">Mã ĐVKH có</th>
+                                                    <th class="min-w-100px">ĐVKH có</th>
+                                                    <th class="min-w-100px">Mã Vlsphh</th>
+                                                    <th class="min-w-100px">Tên Visphh</th>
+                                                    <th class="min-w-100px">Số lượng</th>
+                                                    <th class="min-w-100px">Đơn giá</th>
+                                                    <th class="min-w-100px">VNĐ</th>
+                                                    <th class="min-w-100px">Thuế VAT</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody class="fw-semibold text-gray-800 text-center">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
